@@ -3,138 +3,17 @@
   font-family:"Raleway";
 }
 
-#search{
-  margin-left:30vh;
-}
-body{
-  background:black;
-  color:wheat;
-}
-#udayi{
-  position: fixed;
-  top:100vh;
-}
-#i{
-  width:75vh;
-  height:85vh;
- margin-left:18vh;
- margin-top:-10vh;
- background:black;
-  color:wheat;
-}
-#w{
-  max-width:115vh;
-  width:auto;
-  height:85vh;
-  margin-top:-10vh;
-  background:black;
-  color:wheat;
-}
-@media (max-width: 600px) {
-    #w{
-        max-width: 100%;      /* Image scales down to fit the container */
-        height: auto;         /* Maintain aspect ratio */
-    }
-    #i{
- max-width: 100%;    
- margin-top:0vh; 
- margin-left:0; /* Image scales down to fit the container */
-        height: auto;  
-    }
-    #uday{
-  margin-left:30px;
-  margin-bottom:0px;
-}
-#udayi{
-    margin:0;}
-  #optionsList{
-      margin-bottom: 0;
-  }
-}
-footer,nav,section,p,.navbar-brand,.card-footer,.badge{
-  background:black;
-  color:wheat;
-}
-#uday{
-  margin-left:30px;
-  margin-bottom:60px;
-}
-
 .idk{
   position:fixed;
   left:38%;
   top:38%;
   color:white;
-  background:black;
-  color:wheat;
   font-size:100px;
 }
-#card{
-  display: block;
-  background:black;
-  color:wheat;
+.fo{
+  font-size: 30px;
+  background-color: #f8f9fa;
 }
-
-/* CSS styling for the carousel */
-/* Styling for the list */
-#list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-/* Styling for list items */
-#optionsList {
-  padding: 10px;
-  background-color: #000000;
-  margin-bottom: 5px;
-  border-radius: 5px;
- color:wheat;
- background:black;
-  color:wheat;
-}
-
-/* Hover effect */
-#list li:hover {
-  background-color: #ddd;
-}
-
-/* Specific styles for each item */
-#item1 {
-  color: blue;
-}
-
-#item2 {
-  color: green;
-}
-
-#item3 {
-  color: red;
-}
-
-#item4 {
-  color: orange;
-}
-
-/* Hide radio buttons */
-input[type="radio"] {
-    display: none;
-}
-/* Show radio button labels */
-label {
-    display: inline-block;
-    cursor: pointer;
-    padding: 5px;
-}
-/* Hide all slides by default */
-.carousel-item {
-    display: none;
-}
-/* Show only the active slide */
-input[type="radio"]:checked ~ .carousel-inner .carousel-item {
-    display: block;
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
