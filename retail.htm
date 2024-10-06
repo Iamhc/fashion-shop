@@ -19,65 +19,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Scribble&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)
-   
-        -->
+        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="styles.css" rel="stylesheet" />
     </head>
     <body>
-     <script>
-      // JavaScript for drag and drop functionality
-const list = document.getElementById('list');
-
-list.addEventListener('dragstart', (e) => {
-    e.dataTransfer.setData('text/plain', e.target.id);
-    e.target.classList.add('dragging');
-});
-
-list.addEventListener('dragover', (e) => {
-    e.preventDefault();
-    const afterElement = getDragAfterElement(list, e.clientY);
-    const draggable = document.querySelector('.dragging');
-    if (afterElement == null) {
-        list.appendChild(draggable);
-    } else {
-        list.insertBefore(draggable, afterElement);
-    }
-});
-
-list.addEventListener('dragend', (e) => {
-    const draggable = document.querySelector('.dragging');
-    draggable.classList.remove('dragging');
-});
-
-function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('li:not(.dragging)')];
-    return draggableElements.reduce((closest, child) => {
-        const box = child.getBoundingClientRect();
-        const offset = y - box.top - box.height / 2;
-        if (offset < 0 && offset > closest.offset) {
-            return { offset: offset, element: child };
-        } else {
-            return closest;
-        }
-    }, { offset: Number.NEGATIVE_INFINITY }).element;
-}
-
-      </script>
-       
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand " href="#!" id="fo">BANTU QUEENZ</a>
+                <a class="navbar-brand " href="#!" id="fo"><h6 class="fo">SKINOY</h6></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Choose Appointment</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Your info</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link " id="navbar" href="#" role="button"  aria-expanded="false">Confirmation</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#!">All Products</a></li>
                                 <li><hr class="dropdown-divider" /></li>
@@ -86,470 +44,147 @@ function getDragAfterElement(container, y) {
                             </ul>
                         </li>
                     </ul>
-<br><br>
-
-
-<select id="optionsList">
-  <option value="option1">Box Cornrows</option>
-  <option value="option2">Braids popolang Incuding extension</option>
-  <option value="option3">Braids Bauchnabellang Incuding extension</option>
-  <option value="option4">Braids ombre Bauchnabellang including extension</option>
-  <option value="option4">Braids ombre Popolang</option>
-</select>
+                    <form class="d-flex">
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i>
+                            Cart
+                            <span class="badge bg-dark text-white ms-1 rounded-pill"></span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </nav>
-
-      
-       
         <!-- Product section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
-
-            
-
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="col-md-6" ><img class=" card-img-top  " id="w" src="https://cdn-s.acuityscheduling.com/upload-bf47b159c82366a6b84a010ee408aedd.jpg"
+                    <div class="col-md-6" id="i"><img class=" card-img-top mb-5 mb-md-0 "  src="https://images.unsplash.com/photo-1594465919760-441fe5908ab0?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                          alt="..." /></div>
                     <div class="col-md-6">
-                        <div class="small mb-1"></div>
-                        <h1 class="display-5 fw-bolder"></h1>
+                        <div class="small mb-1">WELCOME TO SKINOY</div>
+                        <h1 class="display-5 fw-bolder">Beauty enlightens you.</h1>
                      
-                        <p class="lead"><div class="col"><img class=" card-img-top  "  id="i" src="https://cdn-s.acuityscheduling.com/upload-d5b28d9f8aec947346b05a30107d9697.jpg"
-                          alt="..." /></div></p>
+                        <p class="lead">Unveil Your Beauty, One Click Away!
+                            Discover the Magic of Glamour with Our Cosmetic Array.
+                            From Radiant Skincare to Mesmerizing Makeup,
+                            Elevate Your Style with Every Swipe and Spray.
+                            Shop Now and Let Your Confidence Slay!</p>
                         <div class="d-flex">
                         
                         </div>
                     </div>
                 </div>
             </div>
-       
-      </section>
+        </section>
         <!-- Related items section-->
-        
-       
-
-        <section class="py-5 bg-black">
+        <section class="py-5 bg-light">
             <div class="container px-4 px-lg-5 mt-5">
-              <h2 class="fw-bolder mb-4">Products</h2>
+                <h2 class="fw-bolder mb-4">Products</h2>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41970848.png?1677306358" alt="..." />
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="..." />
                             <!-- Product details-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Box Cornrows</div>
-                            <div class="card-body p-4" id=card>
+                            <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id=carda>Box Cornrows | 030-1000
-                                    </h5>
+                                    <h5 class="fw-bolder">Foundation</h5>
                                     <!-- Product price-->
-                                    2 hours @ €95.00
-                                    95 euros ohne extension | 030-1000
+                                    $40.00 - $80.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Box Cornrows</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41970866.png?1677306389" alt="..." />
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1625093742435-6fa192b6fb10?q=80&w=1789&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="..." />
                             <!-- Product details-->
-                            <div class="card-body p-4" id=card>
+                            <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id=carda>Box Cornrows | 030-9502
-                                     </h5>
+                                    <h5 class="fw-bolder">Lipsticks</h5>
                                     <!-- Product reviews-->
-                                  
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
                                     <!-- Product price-->
-                                    
-                                    2 hours @ €100.00
-                                    100 euros inkl. extension | 030-9502
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
                                 </div>
                             </div>
                             <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 ">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto " href="#">Book</a></div>
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41964385.png?1677215333" alt="..." />
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1500840216050-6ffa99d75160?q=80&w=1797&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="..." />
                             <!-- Product details-->
-                            <div class="card-body p-4" id=card>
+                            <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id=carda>Braids popolang Incuding extension | 001-2508</h5>
+                                    <h5 class="fw-bolder">Brushes</h5>
                                     <!-- Product price-->
-                                   
-                                    6 hours @ €400.00
-                                    Popolang dünn: 400 euros | 001-2508
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41964385.png?1677215333" alt="..." />
+                            <img class="card-img-top" src="https://images.unsplash.com/photo-1625093525885-282384697917?q=80&w=2001&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="..." />
                             <!-- Product details-->
-                            <div class="card-body p-4" id=card>
+                            <div class="card-body p-4">
                                 <div class="text-center">
-                                  <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder" id=carda>
-                                      Braids popolang includind Extension | 001-3004</h5>
+                                    <h5 class="fw-bolder">Palette</h5>
                                     <!-- Product reviews-->
-                                   
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
                                     <!-- Product price-->
-                                    12 hours @ €350.00
-                                    Popolang dünn: 350 euros | 001-3004
+                                    $40.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-       
-          <div class="container px-4 px-lg-5 mt-5">
-             
-              <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                  <div class="col mb-5">
-                      <div class="card h-100">
-                          <!-- Product image-->
-                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                          <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41965211.png?1677304795" alt="..." />
-                          <!-- Product details-->
-                          <div class="card-body p-4" id=card>
-                              <div class="text-center">
-                                  <!-- Product name-->
-                                  <h5 class="fw-bolder" id=carda>Braids Bauchnabellang Incuding extension | 002-2006</h5>
-                                  <!-- Product price-->
-                                  6 hours @ €250.00
-                                  Bauchnabellang dünn: 250 euros | 002-2006
-                              </div>
-                          </div>
-                          <!-- Product actions-->
-                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col mb-5">
-                      <div class="card h-100">
-                          <!-- Sale badge-->
-                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                          <!-- Product image-->
-                          <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41965541.png?1677304814" alt="..." />
-                          <!-- Product details-->
-                          <div class="card-body p-4" id=card>
-                              <div class="text-center">
-                                  <!-- Product name-->
-                                  <h5 class="fw-bolder" id=carda>Braids Bauchnabellang| 002-2503</h5>
-                                  <!-- Product reviews-->
-                                  <!--<div class="d-flex justify-content-center small text-warning mb-2">
-                                      <div class="bi-star-fill"></div>
-                                      <div class="bi-star-fill"></div>
-                                      <div class="bi-star-fill"></div>
-                                      <div class="bi-star-fill"></div>
-                                      <div class="bi-star-fill"></div>
-                                  </div>-->
-                                  <!-- Product price-->
-                                  3 hours 30 minutes @ €275.00
-                                  Bauchnabellang dünn: 275 euros | 002-2503
-                              </div>
-                          </div>
-                          <!-- Product actions-->
-                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col mb-5">
-                      <div class="card h-100">
-                          <!-- Sale badge-->
-                          <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                          <!-- Product image-->
-                          <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41965622.png?1677304859" alt="..." />
-                          <!-- Product details-->
-                          <div class="card-body p-4" id=card>
-                              <div class="text-center">
-                                  <!-- Product name-->
-                                  <h5 class="fw-bolder" id=carda>
-                                    Braids ombre Bauchnabellang including extension | 003-2504</h5>
-                                  <!-- Product price-->
-                                3 hours 30 minutes @ €330.00
-                                    Bauchnabellang: 330 euros | 003-2504
-                                  $25.00
-                              </div>
-                          </div>
-                          <!-- Product actions-->
-                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="col mb-5">
-                      <div class="card h-100">
-                          <!-- Product image-->
-                          <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41965921.png?1677304919" alt="..." />
-                          <!-- Product details-->
-                          <div class="card-body p-4" id=card>
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                              <div class="text-center">
-                                  <!-- Product name-->
-                                  <h5 class="fw-bolder" id=carda>Braids ombre Popolang Incuding extension | 004-3008</h5>
-                                  <!-- Product reviews-->
-                           
-                                  <!-- Product price-->
-                                  6 hours @ €450.00
-                                  Popolang dünn: 450 euros | 004-3008
-                              </div>
-                          </div>
-                          <!-- Product actions-->
-                          <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                              <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-           
-         
-    <!-- Related items section-->
-    
-        <div class="container px-4 px-lg-5 mt-5">
-          
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41965971.png?1677304964" alt="..." />
-                        <!-- Product details-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                        <div class="card-body p-4" id=card>
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder" id=carda>Braids ombre Popolang| 004-3504
-                                 
-                                </h5>
-                                <!-- Product price-->
-                                12 hours @ €430.00
-                                Popolang dünn: 430 euros | 004-3504
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41967474.png?1677305010" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4" id=card>
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder" id=carda>Braids: Brustlang Including Extension | 005-2006
-                                 </h5>
-                                <!-- Product reviews-->
-                              
-                                <!-- Product price-->
-                                
-                                6 hours @ €220.00
-                                220 euros | 005-2006
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Sale badge-->
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41967652.png?1677305039" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4" id=card>
-                            <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder" id=carda>Braids: Brustlang | 005-2503 including Extension</h5>
-                                <!-- Product price-->
-                               
-                                3 hours @ €250.00
-250 euros | 005-2503
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <!-- Product image-->
-                        <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41967703.png?1677305163" alt="..." />
-                        <!-- Product details-->
-                        <div class="card-body p-4" id=card>
-                            <div class="text-center">
-                              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                                <!-- Product name-->
-                                <h5 class="fw-bolder" id=carda>
-                                  Braids: Brustlang Including Extension | 006-2006</h5>
-                                <!-- Product reviews-->
-                               
-                                <!-- Product price-->
-                                
-                            </div>
-                        </div>
-                        <!-- Product actions-->
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-   
-      <div class="container px-4 px-lg-5 mt-5">
-         
-          <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-              <div class="col mb-5">
-                  <div class="card h-100">
-                      <!-- Product image-->
-                      <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                      <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41967763.png?1677307282" alt="..." />
-                      <!-- Product details-->
-                      <div class="card-body p-4" id=card>
-                          <div class="text-center">
-                              <!-- Product name-->
-                              <h5 class="fw-bolder" id=carda>Braids: Brustlang including Extension | 006-2503</h5>
-                              <!-- Product price-->
-                              3 hours @ €250.00
-250 euros | 006-2503
-                          </div>
-                      </div>
-                      <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col mb-5">
-                  <div class="card h-100">
-                      <!-- Sale badge-->
-                      <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                      <!-- Product image-->
-                      <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41967894.jpg?1677221427" alt="..." />
-                      <!-- Product details-->
-                      <div class="card-body p-4" id=card>
-                          <div class="text-center">
-                              <!-- Product name-->
-                              <h5 class="fw-bolder" id=carda>Braids: Brustlang Including Extension | 007-2206</h5>
-                              <!-- Product reviews-->
-                              <!--<div class="d-flex justify-content-center small text-warning mb-2">
-                                  <div class="bi-star-fill"></div>
-                                  <div class="bi-star-fill"></div>
-                                  <div class="bi-star-fill"></div>
-                                  <div class="bi-star-fill"></div>
-                                  <div class="bi-star-fill"></div>
-                              </div>-->
-                              <!-- Product price-->
-                              7 hours @ €240.00
-240 euros | 007-2206
-                          </div>
-                      </div>
-                      <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col mb-5">
-                  <div class="card h-100">
-                      <!-- Sale badge-->
-                      <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                      <!-- Product image-->
-                      <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41967894.jpg?1677221427" alt="..." />
-                      <!-- Product details-->
-                      <div class="card-body p-4" id=card>
-                          <div class="text-center">
-                              <!-- Product name-->
-                              <h5 class="fw-bolder" id=carda>
-                                Braids: Brustlang | 007-2703</h5>
-                              <!-- Product price-->
-                              3 hours @ €260.00
-                              Braids: Brustlang-Mitteldick 260 euros | 007-2703
-                          </div>
-                      </div>
-                      <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                      </div>
-                  </div>
-              </div>
-              <div class="col mb-5">
-                  <div class="card h-100">
-                      <!-- Product image-->
-                      <img class="card-img-top" src="https://cdn-s.acuityscheduling.com/appointmentType-thumb-41968043.png?1677305245" alt="..." />
-                      <!-- Product details-->
-                      <div class="card-body p-4" id=card>
-                        <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">BRAIDS</div>
-                          <div class="text-center">
-                              <!-- Product name-->
-                              <h5 class="fw-bolder" id=carda>Braids: Bauchnabellang sehr dünn Including Extension | 008-3008</h5>
-                              <!-- Product reviews-->
-                       
-                              <!-- Product price-->
-                              8 hours @ €300.00
-                              300 euros | 008-3008
-                          </div>
-                      </div>
-                      <!-- Product actions-->
-                      <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                          <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Book</a></div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-
-      
-  </section>
-          
-      </section>
+        </section>
         <!-- Footer-->
         <!-- Footer -->
-<footer class="text-center text-lg-start bg-black text-white">
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->
@@ -592,24 +227,36 @@ function getDragAfterElement(container, y) {
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
             <!-- Content -->
             <h6 class=" navbar-brand  " id="fo">
-          BANTU QUEENZ
+           SKINOY
             </h6>
            
             <p>
                 Beauty enlightens you.
             </p>
-           
+            <h5 class=" ">
+                John smith
+                   </h5>
+                   <h7 class="font-weight-bold  ">
+                    CEO
+                       </h7>
+                       <h7 class="font-weight-bold  ">
+                        Management
+                           </h7>
           </div>
         
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
           <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
               Products
             </h6>
             <p>
-              <a href="#!" class="text-reset">BOXCORNROWS</a>
+              <a href="#!" class="text-reset">Foundation</a>
             </p>
             <p>
-              <a href="#!" class="text-reset">BRAIDS</a>
+              <a href="#!" class="text-reset">Lipsticks</a>
             </p>
             <p>
               <a href="#!" class="text-reset">Brushes</a>
@@ -618,7 +265,11 @@ function getDragAfterElement(container, y) {
               <a href="#!" class="text-reset">Palette</a>
             </p>
           </div>
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
               Useful links
             </h6>
@@ -635,10 +286,35 @@ function getDragAfterElement(container, y) {
               <a href="#!" class="text-reset">Help</a>
             </p>
           </div>
-       
+          <!-- Grid column -->
+  
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fa fa-home me-3"></i> 123 Beauty Street Zurich,Switzerland</p>
+            <p>
+              <i class="fa fa-envelope me-3"></i>
+              johnsmith@skinoy.com
+            </p>
+            <p><i class="fa fa-phone me-3"></i> + 41 78 123 45 67</p>
+           
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
     </section>
+    <!-- Section: Links  -->
+  
+    <!-- Copyright -->
+   
+    <!-- Copyright -->
   </footer>
+  <!-- Footer -->
+        <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-       
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
     </body>
 </html>
